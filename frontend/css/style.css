@@ -1,0 +1,857 @@
+/* =========================================
+   HERGLOW DESIGN SYSTEM
+========================================= */
+
+:root {
+    /* Colors */
+    --cream: #FAF7F2;
+    --sage: #A8B5A2;
+    --rose: #D9A6A6;
+    --lavender: #C7BDD9;
+    --brown: #343034;
+    --white: #FFFFFF;
+
+    /* Fonts */
+    --heading-font: "Playfair Display", serif;
+    --body-font: "Poppins", sans-serif;
+}
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--brown);
+    font-family: var(--body-font);
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn-herglow {
+    display: inline-block;
+
+    background-color: var(--sage);
+    color: var(--brown);
+
+    border: none;
+    border-radius: 30px;
+
+    padding: 13px 25px;
+
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+.btn-herglow:hover {
+    background-color: var(--rose);
+    color: var(--brown);
+
+    transform: translateY(-2px);
+}
+
+.btn-outline-herglow {
+    display: inline-block;
+
+    border: 1px solid var(--brown);
+    color: var(--brown);
+
+    border-radius: 30px;
+
+    padding: 8px 22px;
+
+    font-size: 0.85rem;
+
+    transition: all 0.3s ease;
+}
+
+.btn-outline-herglow:hover {
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+.btn-link-herglow {
+    color: var(--brown);
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    transition: color 0.3s ease;
+}
+
+.btn-link-herglow:hover {
+    color: var(--rose);
+}
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.eyebrow {
+    font-family: var(--body-font);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.section-heading h2 {
+    font-size: 3rem;
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    font-size: 0.95rem;
+}
+/* =========================================
+   NAVBAR
+========================================= */
+
+.herglow-navbar {
+    background-color: var(--cream);
+    padding: 20px 0;
+
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-family: var(--heading-font);
+
+    font-size: 1.7rem;
+    font-weight: 600;
+
+    color: var(--brown);
+}
+
+.navbar-brand:hover {
+    color: var(--brown);
+}
+
+.nav-link {
+    color: var(--brown) !important;
+
+    font-size: 0.85rem;
+    font-weight: 400;
+
+    margin-left: 18px;
+
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--rose) !important;
+}
+
+.herglow-navbar .navbar-toggler {
+    border: none;
+    box-shadow: none;
+}
+
+.herglow-navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+    padding: 80px 0 100px;
+}
+
+.hero-section h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-section h1 span {
+    color: var(--rose);
+}
+
+.hero-text {
+    max-width: 520px;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.hero-image-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 180px 180px 20px 20px;
+    background-color: var(--lavender);
+}
+
+.hero-image {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+}
+/* =========================================
+   SKINSENSE PAGE
+========================================= */
+
+.skinsense-hero {
+    padding: 70px 0 60px;
+}
+
+.skinsense-hero h1 {
+    font-size: 3.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.skinsense-hero h1 span {
+    color: var(--rose);
+}
+
+.skinsense-hero .section-heading p:last-child {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Quiz Section */
+
+.skinsense-quiz-section {
+    padding: 20px 0 100px;
+}
+
+.quiz-card {
+    max-width: 750px;
+    margin: 0 auto;
+
+    background-color: var(--white);
+
+    padding: 60px 50px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 35px rgba(52, 48, 52, 0.06);
+}
+
+.quiz-card h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.quiz-card > p:not(.eyebrow) {
+    max-width: 570px;
+    margin: 0 auto 30px;
+
+    font-size: 0.95rem;
+}
+
+
+/* Footer */
+
+.herglow-footer {
+    padding: 45px 0;
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+.herglow-footer p {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.herglow-footer small {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+/* =========================================
+   SKINSENSE QUIZ
+========================================= */
+
+.quiz-question {
+    margin-top: 45px;
+}
+
+.quiz-question h3 {
+    font-family: var(--heading-font);
+    font-size: 1.35rem;
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.quiz-options label {
+    cursor: pointer;
+}
+
+.quiz-options input {
+    display: none;
+}
+
+.quiz-options span {
+    display: block;
+
+    padding: 16px 18px;
+
+    background-color: var(--cream);
+
+    border: 1px solid transparent;
+    border-radius: 15px;
+
+    font-size: 0.85rem;
+
+    transition: all 0.25s ease;
+}
+
+.quiz-options span:hover {
+    border-color: var(--rose);
+    transform: translateY(-2px);
+}
+
+.quiz-options input:checked + span {
+    background-color: var(--rose);
+    border-color: var(--rose);
+
+    font-weight: 500;
+}
+
+.quiz-submit {
+    margin-top: 45px;
+}
+
+.quiz-result {
+    display: none;
+
+    margin-top: 30px;
+    padding: 25px;
+
+    background-color: var(--lavender);
+
+    border-radius: 18px;
+}
+/* =========================================
+   SKIN TYPE CARDS
+========================================= */
+
+.skin-types-section {
+    padding: 80px 0 100px;
+}
+
+.skin-type-card {
+    height: 100%;
+
+    padding: 30px 25px;
+
+    background-color: var(--white);
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.skin-type-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 30px rgba(52, 48, 52, 0.07);
+}
+
+.skin-type-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--lavender);
+
+    border-radius: 50%;
+
+    font-size: 1.4rem;
+}
+
+.skin-type-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.skin-type-card p {
+    font-size: 0.82rem;
+    margin-bottom: 0;
+}
+/* =========================================
+   HERVAULT PAGE
+========================================= */
+
+.hervault-hero {
+    padding: 70px 0 40px;
+}
+
+.hervault-hero h1 {
+    font-size: 3.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hervault-hero h1 span {
+    color: var(--rose);
+}
+
+
+/* Search */
+
+.hervault-search {
+    padding: 10px 0 60px;
+}
+
+.vault-search-box {
+    max-width: 650px;
+    margin: 0 auto;
+
+    display: flex;
+    gap: 10px;
+
+    padding: 8px;
+
+    background-color: var(--white);
+
+    border-radius: 40px;
+
+    box-shadow: 0 8px 25px rgba(52, 48, 52, 0.06);
+}
+
+.vault-search-box input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    padding: 12px 20px;
+
+    background: transparent;
+
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+}
+
+.vault-search-box input::placeholder {
+    color: #999;
+}
+
+
+/* Article Cards */
+
+.vault-categories {
+    padding: 20px 0 100px;
+}
+
+.vault-card {
+    height: 100%;
+
+    padding: 35px 30px;
+
+    background-color: var(--white);
+
+    border-radius: 22px;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.vault-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 35px rgba(52, 48, 52, 0.08);
+}
+
+.vault-icon {
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--lavender);
+
+    border-radius: 50%;
+
+    font-size: 1.3rem;
+}
+
+.vault-category {
+    margin-bottom: 10px;
+
+    font-size: 0.68rem;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: var(--rose);
+}
+
+.vault-card h2 {
+    font-size: 1.45rem;
+    line-height: 1.3;
+
+    margin-bottom: 15px;
+}
+
+.vault-card > p:not(.vault-category) {
+    font-size: 0.82rem;
+
+    margin-bottom: 22px;
+}
+/* =========================================
+   HERCYCLE PAGE
+========================================= */
+
+.hercycle-hero {
+    padding: 70px 0 50px;
+}
+
+.hercycle-hero h1 {
+    font-size: 3.6rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hercycle-hero h1 span {
+    color: var(--rose);
+}
+
+
+/* Cycle Tracker */
+
+.cycle-tracker-section {
+    padding: 20px 0 80px;
+}
+
+.cycle-card {
+    max-width: 800px;
+    margin: 0 auto;
+
+    padding: 50px;
+
+    background-color: var(--white);
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 35px rgba(52, 48, 52, 0.06);
+}
+
+.cycle-card h2 {
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+.cycle-card .text-center > p:not(.eyebrow) {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.herglow-input {
+    min-height: 48px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    font-family: var(--body-font);
+    font-size: 0.85rem;
+}
+
+.herglow-input:focus {
+    border-color: var(--rose);
+
+    box-shadow: 0 0 0 3px rgba(217, 166, 166, 0.15);
+}
+
+
+/* Cycle Result */
+
+.cycle-result {
+    display: none;
+
+    margin-top: 30px;
+    padding: 25px;
+
+    background-color: var(--lavender);
+
+    border-radius: 18px;
+}
+
+
+/* Cycle Phases */
+
+.cycle-phases-section {
+    padding: 80px 0 90px;
+}
+
+.cycle-phase-card {
+    height: 100%;
+
+    padding: 30px 22px;
+
+    background-color: var(--white);
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.cycle-phase-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 30px rgba(52, 48, 52, 0.07);
+}
+
+.cycle-phase-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--rose);
+
+    border-radius: 50%;
+
+    font-size: 1.3rem;
+}
+
+.cycle-phase-card h3 {
+    font-size: 1.3rem;
+
+    margin-bottom: 12px;
+}
+
+.cycle-phase-card p {
+    font-size: 0.8rem;
+
+    margin-bottom: 0;
+}
+
+
+/* Disclaimer */
+
+.cycle-note-section {
+    padding: 0 0 80px;
+}
+
+.cycle-note {
+    max-width: 850px;
+    margin: 0 auto;
+
+    padding: 20px 25px;
+
+    background-color: #f1eee8;
+
+    border-left: 4px solid var(--sage);
+
+    border-radius: 10px;
+
+    font-size: 0.78rem;
+}
+
+.cycle-note strong {
+    font-weight: 600;
+}
+/* =========================================
+   MYGLOW PAGE
+========================================= */
+
+.myglow-hero {
+    padding: 70px 0 45px;
+}
+
+.myglow-hero h1 {
+    font-size: 3.6rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.myglow-hero h1 span {
+    color: var(--rose);
+}
+
+
+/* Glow Score */
+
+.glow-score-section {
+    padding: 20px 0 70px;
+}
+
+.glow-score-card {
+    max-width: 500px;
+    margin: 0 auto;
+
+    padding: 40px;
+
+    background-color: var(--lavender);
+
+    border-radius: 25px;
+}
+
+.glow-score {
+    font-family: var(--heading-font);
+
+    font-size: 5rem;
+    line-height: 1;
+
+    margin: 15px 0;
+
+    color: var(--brown);
+}
+
+
+/* Habits */
+
+.habits-section {
+    padding: 50px 0 100px;
+}
+
+.habit-card {
+    height: 100%;
+
+    padding: 30px 22px;
+
+    background-color: var(--white);
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.habit-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 30px rgba(52, 48, 52, 0.07);
+}
+
+.habit-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--sage);
+
+    border-radius: 50%;
+
+    font-size: 1.3rem;
+}
+
+.habit-card h3 {
+    font-size: 1.3rem;
+
+    margin-bottom: 10px;
+}
+
+.habit-card p {
+    font-size: 0.8rem;
+
+    margin-bottom: 20px;
+}
+
+
+/* Habit Checkbox */
+
+.habit-check {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    font-size: 0.78rem;
+}
+
+.habit-check input {
+    width: 17px;
+    height: 17px;
+
+    accent-color: var(--sage);
+
+    cursor: pointer;
+}
+
+.habits-save {
+    margin-top: 40px;
+}

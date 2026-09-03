@@ -1,0 +1,31 @@
+/* =========================================
+   SKINSENSE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .skinsense-hero {
+        padding: 50px 0 40px;
+    }
+
+    .skinsense-hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .quiz-card {
+        padding: 40px 25px;
+    }
+
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-question h3 {
+        font-size: 1.15rem;
+    }
+
+    .skin-types-section {
+        padding: 60px 0 70px;
+    }
+
+}
