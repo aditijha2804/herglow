@@ -855,3 +855,46 @@ img {
 .habits-save {
     margin-top: 40px;
 }
+/* =========================================
+   BREATHING EXERCISE
+========================================= */
+
+.breathing-circle {
+    width: 150px;
+    height: 150px;
+
+    margin: 30px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--lavender);
+
+    border-radius: 50%;
+
+    font-family: var(--heading-font);
+    font-size: 1.3rem;
+
+    cursor: pointer;
+
+    transition: transform 4s ease-in-out;
+}
+
+.breathing-circle.breathing-active {
+    transform: scale(1.35);
+}
+/* =========================================
+   WELCOME MESSAGE
+========================================= */
+
+.welcome-message {
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    color: var(--rose);
+}
