@@ -102,3 +102,130 @@ calculateButton.addEventListener("click", function () {
     });
 
 });
+// ==============================
+// SAVE CYCLE TO BACKEND
+// ==============================
+
+const saveCycleBtn = document.getElementById("saveCycleBtn");
+const cycleSaveMessage = document.getElementById("cycleSaveMessage");
+
+if (saveCycleBtn) {
+
+    saveCycleBtn.addEventListener("click", async () => {
+
+        const savedUser = localStorage.getItem("herglowUser");
+
+        if (!savedUser) {
+            cycleSaveMessage.textContent =
+                "Please log in before saving your cycle.";
+            cycleSaveMessage.className =
+                "mt-3 text-danger";
+            return;
+        }
+
+        const user = JSON.parse(savedUser);
+
+        const startDate =
+            document.getElementById("periodStart").value;
+
+        const cycleLength =
+            document.getElementById("cycleLength").value;
+
+        if (!startDate) {
+            cycleSaveMessage.textContent =
+                "Please select your period start date.";
+            cycleSaveMessage.className =
+                "mt-3 text-danger";
+            return;
+        }
+
+        try {
+
+            const response = await fetch(
+                "http://localhost:5000/api/cycle",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        user_id: user.id,
+                        start_date: startDate,
+                        cycle_length: Number(cycleLength),
+                        period_length: 5
+                    })
+                }
+            );
+
+            const data = await response.json();
+
+            if (response.ok) {
+
+                cycleSaveMessage.textContent =
+                    data.message;
+
+                cycleSaveMessage.className =
+                    "mt-3 text-success";
+
+            } else {
+
+                cycleSaveMessage.textContent =
+                    data.message;
+
+                cycleSaveMessage.className =
+                    "mt-3 text-danger";
+            }
+
+        } catch (error) {
+
+            console.error(error);
+
+            cycleSaveMessage.textContent =
+                "Unable to connect to the HerGlow server.";
+
+            cycleSaveMessage.className =
+                "mt-3 text-danger";
+        }
+    });
+}
+// ==============================
+// LOAD SAVED CYCLE
+// ==============================
+
+async function loadSavedCycle() {
+
+    const savedUser = localStorage.getItem("herglowUser");
+
+    if (!savedUser) {
+        return;
+    }
+
+    const user = JSON.parse(savedUser);
+
+    try {
+
+        const response = await fetch(
+            `http://localhost:5000/api/cycle/${user.id}`
+        );
+
+        const cycles = await response.json();
+
+        if (cycles.length > 0) {
+
+            const latestCycle = cycles[0];
+
+            document.getElementById("periodStart").value =
+                latestCycle.start_date.substring(0, 10);
+
+            document.getElementById("cycleLength").value =
+                latestCycle.cycle_length;
+        }
+
+    } catch (error) {
+
+        console.error("Unable to load saved cycle:", error);
+
+    }
+}
+
+loadSavedCycle();

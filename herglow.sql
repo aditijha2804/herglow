@@ -36,3 +36,58 @@ CREATE TABLE articles (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 SELECT * from users;
+SELECT * from cycles;
+SELECT * from habits;
+SELECT * from articles;
+
+
+ALTER TABLE habits
+ADD UNIQUE KEY unique_user_date (user_id, date);
+SELECT *
+FROM habits
+WHERE user_id = 1
+AND date = '2026-09-15';
+DELETE FROM habits
+WHERE id = 3;
+SHOW INDEX FROM habits;
+
+USE herglow;
+
+INSERT INTO articles (title, category, description, content)
+VALUES
+(
+    'Simple Skincare for Beginners',
+    'Beauty',
+    'Learn the basics of building a simple and consistent skincare routine.',
+    'A simple skincare routine can include cleansing, moisturizing, and daytime sun protection. Choose products according to your skin type and introduce new products gradually.'
+),
+(
+    'Understanding Your Menstrual Cycle',
+    'Women''s Health',
+    'Learn about the common phases of the menstrual cycle.',
+    'The menstrual cycle is commonly described using four phases: menstruation, the follicular phase, ovulation, and the luteal phase. Cycle length and symptoms can vary between individuals.'
+),
+(
+    'Everyday Nutrition',
+    'Nutrition',
+    'Small nutrition habits can support everyday wellness.',
+    'Aim for a varied diet that includes vegetables, fruits, whole grains, protein sources, and adequate fluids. Individual nutritional needs can vary.'
+),
+(
+    'Movement for Everyday Wellness',
+    'Fitness',
+    'Discover simple ways to include movement in your daily routine.',
+    'Walking, stretching, yoga, dancing, and other enjoyable activities can help you stay active. Choose activities that suit your abilities and lifestyle.'
+),
+(
+    'Creating a Self-Care Routine',
+    'Self-Care',
+    'Simple self-care ideas for a calmer daily routine.',
+    'Self-care can include rest, breathing exercises, journaling, spending time with supportive people, or taking a short break from screens.'
+),
+(
+    'Mental Wellness Matters',
+    'Mental Wellness',
+    'Learn simple habits that can support emotional wellbeing.',
+    'Making time for rest, connection, enjoyable activities, and healthy routines can support wellbeing. If you are struggling, consider speaking with a qualified professional.'
+);

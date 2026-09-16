@@ -5,6 +5,9 @@ const cors = require("cors");
 
 const db = require("./db");
 const authRoutes = require("./routes/authRoutes");
+const cycleRoutes = require("./routes/cycleRoutes");
+const habitRoutes = require("./routes/habitRoutes");
+const articleRoutes = require("./routes/articleRoutes");
 
 const app = express();
 
@@ -25,7 +28,9 @@ app.use(express.json());
 // ==============================
 
 app.use("/api/auth", authRoutes);
-
+app.use("/api/cycle", cycleRoutes);
+app.use("/api/habits", habitRoutes);
+app.use("/api/articles", articleRoutes);
 
 
 // ==============================
