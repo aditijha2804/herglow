@@ -74,6 +74,9 @@ if (loginForm) {
                 loginMessage.className = "mt-3 text-center text-success";
 
                 localStorage.setItem("herglowUser", JSON.stringify(data.user));
+                setTimeout(() => {
+    window.location.href = "profile.html";
+}, 500);
             } else {
                 loginMessage.textContent = data.message;
                 loginMessage.className = "mt-3 text-center text-danger";
@@ -130,4 +133,19 @@ if (logoutBtn) {
         window.location.href = "login.html";
 
     });
+}
+// ==============================
+// PROFILE ACCESS PROTECTION
+// ==============================
+
+if (window.location.pathname.endsWith("profile.html")) {
+
+    const savedUser =
+        localStorage.getItem("herglowUser");
+
+    if (!savedUser) {
+
+        window.location.href = "login.html";
+
+    }
 }
