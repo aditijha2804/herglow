@@ -31,7 +31,7 @@ self-care into one platform.
 - Express.js
 
 ### Database
-- MongoDB
+- MySQL
 
 ## 📁 Project Structure
 
